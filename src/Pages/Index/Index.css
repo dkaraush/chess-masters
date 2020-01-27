@@ -1,0 +1,141 @@
+#index {
+	display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+}
+
+#index h1 {
+	color: #C8A98F;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 0;
+}
+#index p {
+	color: #808080;
+	max-width: 90%;
+}
+#index .bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#index .bg span:nth-child(1) {
+	position: absolute;
+	left: 0;
+}
+#index .main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 55%;
+	vertical-align: middle;
+	z-index: 2;
+    display: flex;
+    align-items: center;
+}
+#index .main > div {
+	display: inline-block;
+	margin-top: -100px;
+}
+#index .chess {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	vertical-align: middle;
+	z-index: 1;
+}
+#index .chess canvas {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+@media (max-width: 700px) {
+	#index .main {
+		position: relative;
+	    min-height: 300px;
+	    width: 70%;
+	}
+	#index .main > div {
+		margin-top: 80px;
+	}
+	#index .chess {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 300px;
+	}
+}
+@media (max-width: 500px) {
+	#index .main {
+		width: 100%;
+		right: 0;
+	}
+}
+
+#index .button {
+	background: #202020;
+	color: #C8A98F;
+}
+#index .button .ripple {
+	background-color: rgba(200, 169, 143, 0.2);
+}
+
+
+#index .bg span:nth-child(1) {
+	position: absolute;
+	left: -55px;
+	top: 0;
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	background: rgb(98,84,71);
+	background: linear-gradient(0deg, rgba(98,84,71,1) 0%, rgba(194,164,139,1) 100%);
+	box-shadow: 0 2px 4px rgba(255,255,255,0.2);
+	/*opacity: 0;*/
+	transition: opacity 0.2s ease-in-out;
+}
+#index .bg span:nth-child(2) {
+	width: 50%;
+	height: 150px;
+	position: absolute;
+	bottom: 0;
+	left: -50px;
+	background-image: url(/assets/dot.png);
+	background-repeat: round;
+	background-position: top left;
+	background-size: 20px 20px;
+} 
+#index .bg span:nth-child(3) {
+	width: 20%;
+	height: 90px;
+	position: absolute;
+	top: 0;
+	right: -100px;
+	background-image: url(/assets/dot.png);
+	background-repeat: round;
+	background-position: top left;
+	background-size: 20px 20px;
+} 
+
+@media (max-width: 800px) {
+	#index .bg span:nth-child(1) {
+		opacity: 1;
+	}
+	#index .bg span:nth-child(2) {
+		left: -32px;
+	}
+	#index .bg span:nth-child(3) {
+		right: -32px;
+	}
+}
